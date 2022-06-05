@@ -1,0 +1,9 @@
+{
+  "weily logger ": {
+    "prefix": "log-weily",
+    "body": [
+      "window.logger.$1(\"$2\");"
+    ],
+    "description": "logger for format"
+  }
+}

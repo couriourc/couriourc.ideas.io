@@ -1,0 +1,14 @@
+{
+  "plugins": ["auto-import"],
+  "rules": {
+    "auto-import/auto-import": [
+      2,
+      {
+        "rootPath": "./src",
+        "packages": {
+          "dayjs": "dayjs"
+        }
+      }
+    ]
+  }
+}

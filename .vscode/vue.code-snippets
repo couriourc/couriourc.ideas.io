@@ -1,0 +1,34 @@
+{
+  "weily vue-js template": {
+    "prefix": "weily-template",
+    "body": [
+      "<template>",
+      "  <div class=\"$1-container\">",
+      "  </div>",
+      "</template>",
+      "<script setup>",
+      "",
+      "</script>",
+      "<style lang=\"$2\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "vue template which devlang is js"
+  },
+  "weily vue-ts template": {
+    "prefix": "weily-template",
+    "body": [
+      "<template>",
+      "  <div class=\"$1-container\">",
+      "  </div>",
+      "</template>",
+      "<script lang=\"ts\" setup>",
+      "",
+      "</script>",
+      "<style lang=\"$2\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "vue template which devlang is ts"
+  }
+}

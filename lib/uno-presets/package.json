@@ -1,0 +1,49 @@
+{
+  "name": "@unocss/preset-weily",
+  "version": "0.0.1",
+  "description": "Weily CSS compact preset for UnoCSS",
+  "keywords": [
+    "unocss",
+    "unocss-weily",
+    "unocss-preset"
+  ],
+  "homepage": "",
+  "bugs": {
+    "url": ""
+  },
+  "license": "MIT",
+  "author": "Weily CouriourC <godakid@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "",
+    "directory": "packages/preset-weily"
+  },
+  "funding": "https://github.com/sponsors/couriourc",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "*.css"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "@unocss/core": "0.31.5",
+    "@unocss/preset-mini": "0.31.5"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.4"
+  }
+}

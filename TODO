@@ -1,0 +1,4 @@
+[ ] 添加必要的基础库
+[ ] 添加 eslint,prettier 限制
+[ ] 添加 husky 规范 commit
+
