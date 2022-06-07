@@ -1,6 +1,12 @@
-# Vue 3 + TypeScript + Vite
+# 50 Project Train in Vue3
+## How to use it ?
 
-这个模板应该可以帮助你开始在 Vite 中使用 Vue 3 和 TypeScript 进行开发。 该模板使用 Vue 3 `<script setup>` SFC，查看更多信息：[script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) 。
+1. 创建路由, 并且在路由中添加一个组件
+
+2. 开始你的页面
+
+3. 提供工具有: Unocss、ReturnButton、i18n、autoImport , 提供指令有 v-waves 需要设置请自建
+
 
 ## 推荐安装的插件
 

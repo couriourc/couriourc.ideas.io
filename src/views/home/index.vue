@@ -20,7 +20,7 @@
     >
   </header>
 
-  <content
+  <div
     class="logo-panel mx-auto my-0 rounded-md shadow-light-500 w-90% h-40vh bg-light-100 block p-2 outline-none font-serif max-h-40vh"
   >
     <main>
@@ -39,7 +39,7 @@
         </li>
       </ul>
     </main>
-  </content>
+  </div>
   <div class="w-full flex justify-center mt-20">
     <button
       class="w-40px h-40px p-2 rounded-full outline-transparent shadow-light-50 text-center border-none hover:bg-green-300 hover:shadow-dark-50 hover:shadow-lg hover:text-light-100 text-dark-50 transition-all duration-500 hover:animate-bounce"
