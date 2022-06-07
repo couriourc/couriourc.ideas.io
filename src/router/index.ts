@@ -2,11 +2,36 @@ import type { App } from 'vue'
 import type { Router } from 'vue-router'
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import { setupBeforeEachGuard } from './guard/beforeEach'
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: () => import('../views/home/index.vue')
+  },
+  {
+    path: '/tutorial',
+    name: 'Tutorial',
+    component: () => import('../views/tutorial/index.vue')
+  },
+  {
+    path: '/expanding-cards',
+    name: 'expanding-cards',
+    component: () =>
+      import(/** webpackChunkName: 'expanding-cards' */ '/@/views/expanding-cards/index.vue'),
+    meta: {
+      title: 'Expanding Cards'
+    }
+  },
+  {
+    path: '/progress-step',
+    name: 'progress-step',
+    component: () =>
+      import(/** webpackChunkName: 'expanding-cards' */ '/@/views/progress-step/index.vue'),
+
+    meta: {
+      title: 'Progress Step'
+    }
   }
 ]
 

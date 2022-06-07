@@ -12,7 +12,6 @@ export default defineConfig({
   },
   server: {
     host: '::',
-    open: true,
     cors: true
   }
 })

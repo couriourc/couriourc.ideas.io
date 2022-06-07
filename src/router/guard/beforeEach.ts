@@ -7,4 +7,9 @@ export function setupBeforeEachGuard(router: Router): void {
       next()
     }
   )
+  router.afterEach((to: RouteLocationNormalized, _: RouteLocationNormalized) => {
+    console.log(to)
+
+    document.title = (to.meta['title'] || '50 Project') as string
+  })
 }

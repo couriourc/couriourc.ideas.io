@@ -30,3 +30,4 @@ dist-ssr
 # .local files
 .history
 
+.pnpm-store

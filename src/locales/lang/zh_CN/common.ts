@@ -13,5 +13,7 @@ export default {
   redo: '刷新',
   back: '返回',
   light: '亮色主题',
-  dark: '黑暗主题'
+  dark: '黑暗主题',
+  Skip: '跳过',
+  websiteName: 'Godakid'
 }
