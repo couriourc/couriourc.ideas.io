@@ -27,10 +27,22 @@ const routes: Array<RouteRecordRaw> = [
     path: '/progress-step',
     name: 'progress-step',
     component: () =>
-      import(/** webpackChunkName: 'expanding-cards' */ '/@/views/progress-step/index.vue'),
+      import(/** webpackChunkName: 'progress-step' */ '/@/views/progress-step/index.vue'),
 
     meta: {
       title: 'Progress Step'
+    }
+  },
+  {
+    path: '/rotating-navigation',
+    name: 'rotating-navigation',
+    component: () =>
+      import(
+        /** webpackChunkName: 'rotaing-navigation' */ '/@/views/rotating-navigation/index.vue'
+      ),
+
+    meta: {
+      title: 'Rotating Navigation'
     }
   }
 ]

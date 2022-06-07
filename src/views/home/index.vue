@@ -37,6 +37,12 @@
         >
           <span @click="router.push('/progress-step')"> progress-step</span>
         </li>
+        <li
+          class="col-span-1 row-span-1 bg-dark-100 text-light-50 mr-1 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700"
+          title="rotating-navigation"
+        >
+          <span @click="router.push('/rotating-navigation')"> rotating-navigation</span>
+        </li>
       </ul>
     </main>
   </div>
