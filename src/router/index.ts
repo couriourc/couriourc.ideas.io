@@ -44,6 +44,16 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Rotating Navigation'
     }
+  },
+  {
+    path: '/hidden-search',
+    name: 'hidden-search',
+    component: () =>
+      import(/** webpackChunkName: 'rotaing-navigation' */ '/@/views/hidden-search/index.vue'),
+
+    meta: {
+      title: 'Rotating Navigation'
+    }
   }
 ]
 

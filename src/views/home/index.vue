@@ -1,19 +1,33 @@
-<script setup>
-  import { useRouter } from 'vue-router'
-  const isShow = ref(false)
-  const router = useRouter()
+<script lang="ts" setup>
+  import type { Ref } from 'vue'
 
-  function triggerShow() {
-    isShow.value = !isShow.value
+  interface NavItemProp {
+    title: string
+    path: string
   }
-  function toTutorial() {
-    router.push('/tutorial')
-  }
+  const navList: Ref<Array<NavItemProp>> = ref([
+    {
+      path: '/expanding-cards',
+      title: 'expanding-cards'
+    },
+    {
+      path: '/progress-step',
+      title: 'progress-step'
+    },
+    {
+      path: '/rotating-navigation',
+      title: 'rotating-navigation'
+    },
+    {
+      path: '/hidden-search',
+      title: 'hidden-search'
+    }
+  ])
 </script>
 <template>
   <header class="header flex justify-between px-1 py-2 text-light-50">
     <span class="active:text-blue-500 rounded-lg py-1 px-1 cursor-pointer select-none" v-waves>
-      {{ $t('common.websiteName') }}
+      <i class="i-github"></i>couriourc
     </span>
     <span class="active:text-blue-500 rounded-lg py-1 px-1 cursor-pointer select-none" v-waves>
       Go!</span
@@ -26,22 +40,14 @@
     <main>
       <ul class="grid grid-rows-3 grid-cols-3">
         <li
-          class="col-span-1 row-span-1 bg-dark-100 text-light-50 mr-1 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700"
-          title="expanding-cards"
+          class="col-span-1 row-span-1 bg-dark-100 text-light-50 mr-1 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
+          v-for="nav in navList"
+          :key="nav.title"
+          :title="nav.title"
+          @click="$router.push(nav.path)"
+          v-waves
         >
-          <span @click="router.push('/expanding-cards')"> expanding-cards</span>
-        </li>
-        <li
-          class="col-span-1 row-span-1 bg-dark-100 text-light-50 mr-1 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700"
-          title="progress-step"
-        >
-          <span @click="router.push('/progress-step')"> progress-step</span>
-        </li>
-        <li
-          class="col-span-1 row-span-1 bg-dark-100 text-light-50 mr-1 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700"
-          title="rotating-navigation"
-        >
-          <span @click="router.push('/rotating-navigation')"> rotating-navigation</span>
+          <span> {{ nav.title }}</span>
         </li>
       </ul>
     </main>
@@ -49,7 +55,7 @@
   <div class="w-full flex justify-center mt-20">
     <button
       class="w-40px h-40px p-2 rounded-full outline-transparent shadow-light-50 text-center border-none hover:bg-green-300 hover:shadow-dark-50 hover:shadow-lg hover:text-light-100 text-dark-50 transition-all duration-500 hover:animate-bounce"
-      @click="toTutorial"
+      @click="$router.push('/tutorial')"
       v-waves
     >
       <span class="before:content-🧛"> Go </span>
@@ -60,27 +66,4 @@
   >
     <p>@Copyright Couriourc anytime do</p>
   </footer>
-  <teleport to="body">
-    <transition
-      name="fade"
-      leave-active-class="animate-fade-out"
-      enter-active-class="animate-fade-in"
-    >
-      <div
-        class="fixed bg-dark-200 w-400px h-400px top-50% left-50% translate--50% opacity-90 text-light-50 p-4 transition-opacity duration-500 rounded-md"
-        v-if="isShow"
-      >
-        <div class="flex justify-between">
-          <div class="font-bold">title</div>
-          <button @click="triggerShow">X</button>
-        </div>
-        <div class="bg-light-50 mt-2 rounded h-90% text-dark-300 p-1 indent-xs">
-          <div class="row">
-            <p class="bg-light-800 p-1 rounded-lg">Ctrl + D</p>
-            <span>-------------显示页面</span>
-          </div>
-        </div>
-      </div>
-    </transition>
-  </teleport>
 </template>
