@@ -9,7 +9,7 @@
       <i class="i-icon-carbon-github">return</i>
     </button>
     <div class="w-100% text-center text-white cursor-pointer">{{
-      $attrs['page-title'] || '页面标题'
+      $attrs['page-title'] || $route.name
     }}</div>
   </div>
 </template>
