@@ -8,6 +8,7 @@ import { configCompressPlugin } from './compress'
 import { ConfigMockPlugin } from './mock'
 import { AutoImportDeps } from './autoImport'
 import { configUnocss } from './unocss'
+import { ConfigPagesPlugin } from './pages-gengerator'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export function createVitePlugins() {
@@ -15,7 +16,7 @@ export function createVitePlugins() {
 
   const vitePlugins: (Plugin | Plugin[])[] = [
     configUnocss(),
-
+    ConfigPagesPlugin(),
     // vue支持
     vue(),
     // 自动按需引入依赖

@@ -1,3 +1,6 @@
+<route>
+{ meta: { title: 'Expanding Cards' } }
+</route>
 <script setup>
   import ReturnButton from '/@/components/returnButton.vue'
 </script>

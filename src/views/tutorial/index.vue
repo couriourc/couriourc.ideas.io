@@ -18,6 +18,7 @@
   .info-bar {
     counter-set: step;
   }
+
   .content-item {
     &:before {
       content: 'Step' counter(step);
@@ -26,9 +27,13 @@
       border-radius: 12px;
       padding: 2px;
       color: white;
+
       &::after {
         content: '\\0020';
       }
     }
   }
 </style>
+<route>
+{ meta: { title: '指导', navHidden: true } }
+</route>

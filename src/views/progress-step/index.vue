@@ -1,3 +1,6 @@
+<route>
+{ meta: { title: 'Progress Step' } }
+</route>
 <script lang="ts" setup>
   import type { Ref } from 'vue'
   import ReturnButton from '/@/components/returnButton.vue'

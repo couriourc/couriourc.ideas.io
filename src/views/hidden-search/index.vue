@@ -1,3 +1,6 @@
+<route>
+{ meta: { title: 'Hidden Search' } }
+</route>
 <script lang="ts" setup>
   import returnButtonVue from '/@/components/returnButton.vue'
   import type { Ref } from 'vue'

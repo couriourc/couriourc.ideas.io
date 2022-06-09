@@ -1,28 +1,24 @@
 <script lang="ts" setup>
   import type { Ref } from 'vue'
+  import routes from '~pages'
+  console.log(routes)
 
   interface NavItemProp {
     title: string
     path: string
   }
-  const navList: Ref<Array<NavItemProp>> = ref([
-    {
-      path: '/expanding-cards',
-      title: 'expanding-cards'
-    },
-    {
-      path: '/progress-step',
-      title: 'progress-step'
-    },
-    {
-      path: '/rotating-navigation',
-      title: 'rotating-navigation'
-    },
-    {
-      path: '/hidden-search',
-      title: 'hidden-search'
-    }
-  ])
+  const navList: Ref<Array<NavItemProp>> = ref(
+    routes
+      .filter((route) => {
+        return !route.meta?.navHidden
+      })
+      .map((route) => {
+        return {
+          path: route.path,
+          title: route.meta?.title as string
+        }
+      })
+  )
 </script>
 <template>
   <header class="header flex justify-between px-1 py-2 text-light-50">
@@ -67,3 +63,6 @@
     <p>@Copyright Couriourc anytime do</p>
   </footer>
 </template>
+<route>
+{ meta: { title: '首页' , navHidden: true} }
+</route>
