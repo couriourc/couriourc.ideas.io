@@ -73,13 +73,13 @@
 </template>
 <style lang="scss" scoped>
   .tom {
-    background-image: url(src/assets/split-landing-page/tom.png);
+    background-image: url(../../assets/split-landing-page/tom.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
   .jerry {
-    background-image: url(src/assets/split-landing-page/jerry.png);
+    background-image: url(../../assets/split-landing-page/jerry.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
