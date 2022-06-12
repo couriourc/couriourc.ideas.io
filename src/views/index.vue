@@ -42,14 +42,14 @@
   </header>
 
   <main
-    class="logo-panel scroller w-90% h-40vh bg-light-100 block p-2 outline-none font-serif max-h-40vh overflow-y-scroll"
-    m="x-auto y-0"
+    class="logo-panel scroller w-90% h-40vh bg-light-100 block font-serif max-h-40vh overflow-y-scroll"
+    m="x-auto"
     shadow-light-500
     rounded-md
   >
-    <ul class="grid grid-rows-3 grid-cols-3">
+    <ul class="flex flex-wrap px-2">
       <li
-        class="col-span-1 row-span-1 bg-dark-100 text-light-50 mr-1 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
+        class="bg-dark-100 text-light-50 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
         v-for="nav in navList"
         :key="nav.title"
         :title="nav.title"
