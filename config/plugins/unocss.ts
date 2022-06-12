@@ -12,9 +12,6 @@ export function configUnocss() {
         prefix: 'i-',
         extraProperties: {
           display: 'inline-block'
-        },
-        collections: {
-          // carbon: () => CarbonIcon.then((i) => i.icons as any)
         }
       }),
       presetWind()

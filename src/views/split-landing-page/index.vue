@@ -30,11 +30,14 @@
         duration="1000"
         text="light-200"
         bg="transparent"
-        p="50px"
+        lg:p="50px"
+        md:p="20px"
+        sm:p="10px"
         hover="bg-#4263eb border-#4263eb"
         rounded-lg
         uppercase
-        >Content</button
+        @click="$router.replace('/')"
+        >return</button
       >
     </div>
     <div
@@ -62,11 +65,14 @@
         duration="1000"
         text="light-200"
         bg="transparent"
-        p="50px"
+        lg:p="50px"
+        md:p="20px"
+        sm:p="10px"
         hover="bg-green-500 border-green-500"
         rounded-lg
         uppercase
-        >Content</button
+        @click="$router.replace('/')"
+        >返回</button
       >
     </div>
   </div>
@@ -78,6 +84,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
   .jerry {
     background-image: url(../../assets/split-landing-page/jerry.png);
     background-size: contain;
