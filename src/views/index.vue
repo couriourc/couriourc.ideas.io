@@ -99,8 +99,8 @@
   .scroller::-webkit-scrollbar {
     width: 6px;
     height: min-content;
-    border: dashed white;
+    border: dotted white;
     border-radius: 12px;
-    background-color: darkblue;
+    background-color: #a5d8ff;
   }
 </style>
