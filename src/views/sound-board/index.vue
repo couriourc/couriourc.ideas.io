@@ -3,12 +3,11 @@
 </route>
 <script lang="ts" setup>
   import type { Ref } from 'vue'
-  import { SoundBoardDriver } from './newer-driver'
+  import { SoundBoardDriver } from '/@/drive'
   interface SongInterface {
     name: string
     url: string
   }
-  const localList = import.meta.glob('../../assets/sound-board/*.*')
   const remoteList: Array<SongInterface> = [
     {
       name: 'SoundHelix Song',
@@ -24,15 +23,7 @@
     }
   ]
 
-  const songList: Ref<Array<SongInterface>> = ref([
-    ...remoteList,
-    ...Object.entries(localList).map((item) => {
-      return {
-        name: item[0].split('/').pop() as string,
-        url: item[0] as string
-      }
-    })
-  ])
+  const songList: Ref<Array<SongInterface>> = ref([...remoteList])
   const audioTarget: Ref<HTMLAudioElement | null> = ref(null)
   const currentLoadingUrl: Ref<string | null> = ref(null)
   function handleWave(songUrl: string) {

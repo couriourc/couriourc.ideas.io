@@ -9,6 +9,7 @@
     title: string
     path: string
   }
+  console.log(routes)
   const navList: Ref<Array<NavItemProp>> = ref(
     routes
       .filter((route) => {

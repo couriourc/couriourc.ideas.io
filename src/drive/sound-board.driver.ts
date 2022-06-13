@@ -1,6 +1,6 @@
 import Driver from 'driver.js'
 import 'driver.js/dist/driver.min.css'
-export const $driver = new Driver({
+export const $driver: Driver = new Driver({
   allowClose: false,
   doneBtnText: '完成',
   closeBtnText: '关闭',
@@ -9,7 +9,7 @@ export const $driver = new Driver({
   prevBtnText: '上一步'
 })
 
-export function SoundBoardDriver() {
+export function SoundBoardDriver(): Driver {
   const steps: Driver.Step[] = [
     {
       element: '#card',
@@ -22,5 +22,6 @@ export function SoundBoardDriver() {
   ] as Driver.Step[]
 
   $driver.defineSteps(steps)
-  return $driver.start()
+  $driver.start()
+  return $driver
 }
