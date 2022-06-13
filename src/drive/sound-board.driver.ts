@@ -1,13 +1,5 @@
 import Driver from 'driver.js'
-import 'driver.js/dist/driver.min.css'
-export const $driver: Driver = new Driver({
-  allowClose: false,
-  doneBtnText: '完成',
-  closeBtnText: '关闭',
-  stageBackground: '#fff',
-  nextBtnText: '下一步',
-  prevBtnText: '上一步'
-})
+import { $driver } from '.'
 
 export function SoundBoardDriver(): Driver {
   const steps: Driver.Step[] = [

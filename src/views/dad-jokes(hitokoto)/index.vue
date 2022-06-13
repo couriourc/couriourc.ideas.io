@@ -12,7 +12,7 @@
         每日一言
       </h2>
 
-      <div class="min-h-100px text-dark-200 cursor-pointer" @click="show">
+      <div class="content min-h-100px text-dark-200 cursor-pointer" @click="show">
         <p text-center selection:text-red-300>{{ sentence.hitokoto }}</p>
         <p text-right> {{ `---${sentence.from_who}《${sentence.from}》` }} </p>
       </div>
@@ -31,6 +31,8 @@
   import type { HikitoSentence } from '/@/services/dad-jokes/sentenceService'
   import ReturnButton from '/@/components/returnButton.vue'
   import Message from '/@/components/message.vue'
+  import { DadJokesDriver } from '/@/drive'
+
   const sentence: Ref<HikitoSentence> = ref({
     id: 7297,
     uuid: 'ed9119a0-0051-421a-8863-710e82edba79',
@@ -79,8 +81,13 @@
     navigator.clipboard.writeText(ctx)
     showDom.value?.['showModel']?.()
   }
+  function handleInit() {
+    return Promise.all([handleGetSentence()])
+  }
   onMounted(() => {
-    handleGetSentence()
+    handleInit().then(() => {
+      DadJokesDriver()
+    })
   })
 </script>
 <style lang="scss" scoped>
