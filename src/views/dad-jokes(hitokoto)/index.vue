@@ -3,18 +3,21 @@
 </route>
 <template>
   <ReturnButton />
+  <Message ref="showDom">
+    <span text-white>复制成功</span>
+  </Message>
   <div class="dad-jokes-hitoko-container h-screen flex justify-center items-center">
     <div class="card block w-90% lg:w-400px md:w-70% bg-light-50 p-4 rounded-lg flex flex-col">
       <h2 class="text-gray text-center font-sans drop-shadow cursor-pointer select-none">
         每日一言
       </h2>
 
-      <div class="min-h-100px text-dark-200 cursor-pointer">
+      <div class="min-h-100px text-dark-200 cursor-pointer" @click="show">
         <p text-center selection:text-red-300>{{ sentence.hitokoto }}</p>
         <p text-right> {{ `---${sentence.from_who}《${sentence.from}》` }} </p>
       </div>
       <button
-        class="get-btn outline-none w-60% m-auto rounded border-none p-3 mt-10 bg-#9f68e0 text-light-50"
+        class="get-btn outline-none w-60% m-auto rounded border-none p-3 mt-10 bg-#9f68e0 text-light-50 active:scale-98"
         @click="handleGetSentence"
         v-waves
         >Get Sentence</button
@@ -23,11 +26,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import type { Ref } from 'vue'
+  import type { Ref, VNode } from 'vue'
   import { getSentenceService, hikitoSentenceType } from '/@/services/dad-jokes/sentenceService'
   import type { HikitoSentence } from '/@/services/dad-jokes/sentenceService'
   import ReturnButton from '/@/components/returnButton.vue'
-
+  import Message from '/@/components/message.vue'
   const sentence: Ref<HikitoSentence> = ref({
     id: 7297,
     uuid: 'ed9119a0-0051-421a-8863-710e82edba79',
@@ -68,7 +71,14 @@
         })
     })
   }
-
+  const showDom: Ref<VNode | null> = ref(null)
+  function show() {
+    const ctx =
+      sentence.value.hitokoto + `\n---${sentence.value.from_who}《${sentence.value.from}》`
+    // (ctx)
+    navigator.clipboard.writeText(ctx)
+    showDom.value?.['showModel']?.()
+  }
   onMounted(() => {
     handleGetSentence()
   })
