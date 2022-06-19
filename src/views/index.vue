@@ -50,7 +50,7 @@
   >
     <ul class="flex flex-wrap px-2">
       <li
-        class="bg-dark-100 text-light-50 inline-block text-center text hover:text-dark-100 hover:bg-white-100 border shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
+        class="nav-item m-1 text-dark-50 inline-block text-center text hover:bg-blue-100 shadow-lg hover:animate-tada wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
         v-for="nav in navList"
         :key="nav.title"
         :title="nav.title"
@@ -63,7 +63,8 @@
   </main>
   <div class="w-full flex justify-center mt-20">
     <button
-      class="w-40px h-40px p-2 rounded-full outline-transparent shadow-light-50 text-center border-none hover:bg-green-300 hover:shadow-dark-50 hover:shadow-lg hover:text-light-100 text-dark-50 transition-all duration-500 hover:animate-bounce"
+      class="w-40px h-40px p-2 rounded-full outline-transparent shadow-red-50 text-center border-none text-dark-50 transition-all duration-500"
+      hover="text-white-500 shadow-lg bg-green-300 animate-bounce"
       @click="$router.push('/tutorial')"
       v-waves
     >
@@ -77,6 +78,10 @@
   </footer>
 </template>
 <style lang="scss" scoped>
+  .nav-item {
+    box-shadow: 0 10px 60px 10px rgba(2, 2, 2, 0.1), inset 0 0 10px 4px rgba(18, 64, 124, 0.2),
+      inset 0 0 10px 4px rgba(20, 231, 126, 0.2);
+  }
   .light-line {
     --trans-x: 100%;
     overflow: hidden;
