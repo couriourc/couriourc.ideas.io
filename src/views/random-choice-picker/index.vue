@@ -3,15 +3,16 @@
 </route>
 <script lang="ts" setup>
   import type { Ref } from 'vue'
-
+  // 绑定用户输入的数据
   const choices: Ref<string> = ref('')
-
+  // 创建映射，用于输入的选项
   const randomChoice = computed(() => {
     const value: string = choices.value.trim()
     if (!value.trim()) return []
     const choicesArray = value.trim().split(',')
     return choicesArray
   })
+  // 存储当前所选
   let curSelect = ref('')
   function pickerRandom() {
     let len = randomChoice.value.length
@@ -21,19 +22,22 @@
 
   let lock = false
   function startRandomChoice() {
+    // 防止重复点击，加上🔒
     if (lock) return
     lock = true
 
     let timer = 90
+    // 开始随机挑选
     let interval = setInterval(() => {
       let choice = pickerRandom()
       curSelect.value = choice
-      console.log(choice)
     }, 100)
-
+    // 倒计时，确认最终结果
     setTimeout(() => {
+      // 结果处理
       clearInterval(interval)
       lock = false
+      // 弹出结果
       setTimeout(() => {
         let choice = pickerRandom()
         curSelect.value = choice
