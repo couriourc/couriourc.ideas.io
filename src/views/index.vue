@@ -4,6 +4,7 @@
 <script lang="ts" setup>
   import type { Ref } from 'vue'
   import routes from '~pages'
+  import { setupL2dWidget } from '/@/util/L2dWidgets'
 
   interface NavItemProp {
     title: string
@@ -22,6 +23,11 @@
         }
       })
   )
+  onMounted(() => {
+    nextTick(() => {
+      setupL2dWidget()
+    })
+  })
 </script>
 <template>
   <header class="header flex justify-between px-1 py-2 text-light-50">
