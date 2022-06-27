@@ -1,2 +1,2 @@
 import './logger'
-import './font-awesome'
+import './loading'

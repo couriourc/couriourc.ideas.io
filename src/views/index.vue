@@ -40,8 +40,8 @@
         hover="text-blue-700"
       >
         couriourc
-        <i class="fa fa-github" text-white></i
-      ></a>
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
     </span>
     <span class="active:text-blue-500 rounded-lg py-1 px-1 cursor-pointer select-none" v-waves>
       Go!</span
@@ -88,12 +88,15 @@
     box-shadow: 0 3px 2px 0px rgba(2, 2, 2, 0.1), inset 0 0 10px 4px rgba(18, 64, 124, 0.2),
       inset 0 0 3px 0px rgba(20, 231, 126, 0.2);
   }
+
   .light-line {
     --trans-x: 100%;
     overflow: hidden;
+
     &:hover {
       --trans-x: -100%;
     }
+
     &::before {
       content: '';
       display: inline-block;
@@ -108,6 +111,7 @@
       z-index: 100;
     }
   }
+
   .scroller::-webkit-scrollbar {
     width: 6px;
     height: min-content;

@@ -1,7 +1,7 @@
 {
   "name": "vite-vue3-ts-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "test": "jest",
@@ -11,26 +11,13 @@
     "lint": "eslint src",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "commit": "git-cz",
     "release": "standard-version"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
   },
   "dependencies": {
     "@vueuse/core": "^8.2.6",
     "axios": "^0.26.1",
     "dayjs": "^1.11.1",
     "driver.js": "^0.9.8",
-    "font-awesome": "^4.7.0",
     "live2d-widget": "^3.1.4",
     "pinia": "^2.0.0-rc.10",
     "rollup": "^2.50.0",
