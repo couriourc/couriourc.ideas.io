@@ -40,7 +40,7 @@
         hover="text-blue-700"
       >
         couriourc
-        <sup class="i-logos-github" text-white></sup
+        <i class="fa fa-github" text-white></i
       ></a>
     </span>
     <span class="active:text-blue-500 rounded-lg py-1 px-1 cursor-pointer select-none" v-waves>
