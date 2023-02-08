@@ -2,32 +2,33 @@
 { meta: { title: '首页' , navHidden: true} }
 </route>
 <script lang="ts" setup>
-  import type { Ref } from 'vue'
-  import routes from '~pages'
-  import { setupL2dWidget } from '/@/util/L2dWidgets'
+import type { Ref } from "vue";
+import routes from "~pages";
+import { setupL2dWidget } from "/@/util/L2dWidgets";
 
-  interface NavItemProp {
-    title: string
-    path: string
-  }
-  console.log(routes)
-  const navList: Ref<Array<NavItemProp>> = ref(
-    routes
-      .filter((route) => {
-        return !route.meta?.navHidden
-      })
-      .map((route) => {
-        return {
-          path: route.path,
-          title: route.meta?.title as string
-        }
-      })
-  )
-  onMounted(() => {
-    nextTick(() => {
-      setupL2dWidget()
+interface NavItemProp {
+  title: string;
+  path: string;
+}
+
+console.log(routes);
+const navList: Ref<Array<NavItemProp>> = ref(
+  routes
+    .filter((route) => {
+      return !route.meta?.navHidden;
     })
-  })
+    .map((route) => {
+      return {
+        path: route.path,
+        title: route.meta?.title as string
+      };
+    })
+);
+onMounted(() => {
+  nextTick(() => {
+    setupL2dWidget();
+  });
+});
 </script>
 <template>
   <header class="header flex justify-between px-1 py-2 text-light-50">
@@ -49,7 +50,7 @@
   </header>
 
   <main
-    class="logo-panel scroller w-90% h-40vh bg-light-100 block font-serif max-h-40vh overflow-y-scroll"
+    class="logo-panel scroller w-90% h-40vh bg-#eeeeeee block font-serif max-h-40vh overflow-y-scroll"
     m="x-auto"
     shadow-light-500
     rounded-md
@@ -84,39 +85,23 @@
   </footer>
 </template>
 <style lang="scss" scoped>
-  .nav-item {
-    box-shadow: 0 3px 2px 0px rgba(2, 2, 2, 0.1), inset 0 0 10px 4px rgba(18, 64, 124, 0.2),
-      inset 0 0 3px 0px rgba(20, 231, 126, 0.2);
-  }
+.logo-panel {
+  background: #ffffff;
+  font-family: "JetBrains Mono ExtraBold",sans-serif;
+}
+.nav-item {
+  background: #eeeeee;
+  box-shadow: inset -0.1rem -0.1rem 0.15rem 0.05rem rgb(225 225 225 / 40%),
+  inset 0.1rem 0.1rem 0.15rem 0.05rem rgb(0 0 0 / 40%),
+  -0.1rem -0.1rem 0.15rem 0.05rem rgb(225 225 225 / 40%),
+  0.1rem 0.1rem 0.15rem 0.05rem rgb(0 0 0 / 40%);
+}
 
-  .light-line {
-    --trans-x: 100%;
-    overflow: hidden;
-
-    &:hover {
-      --trans-x: -100%;
-    }
-
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 100%;
-      height: 4px;
-      border-radius: 2em;
-      position: absolute;
-      background-color: aqua;
-      transform: translateX(var(--trans-x));
-      transition: transform 2s;
-      opacity: 50%;
-      z-index: 100;
-    }
-  }
-
-  .scroller::-webkit-scrollbar {
-    width: 6px;
-    height: min-content;
-    border: dotted white;
-    border-radius: 12px;
-    background-color: #a5d8ff;
-  }
+.scroller::-webkit-scrollbar {
+  width: 6px;
+  height: min-content;
+  border: dotted white;
+  border-radius: 12px;
+  background-color: #a5d8ff;
+}
 </style>
