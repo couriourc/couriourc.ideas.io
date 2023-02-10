@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {
+      "name":"root",
+      "x": 500,
+      "y": 250
+    },
+    
+    {
+      
+      "name":"left",
+      "x": 250,
+      "y": 500
+    },
+    {
+      
+      "name":"left-left",
+      "x": 150,
+      "y": 750
+    },
+    {
+      "name":"right",
+      "x": 750,
+      "y": 500
+    }
+  ],
+  "edges": [
+    {
+      "source": "root",
+      "target": "left"
+    },
+    {
+      
+      "source": "root",
+      "target": "right"
+    },
+    
+    {
+      
+      "source": "left",
+      "target": "left-left"
+    }
+  ]
+}

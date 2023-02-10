@@ -14,8 +14,10 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "@types/d3": "^7.4.0",
     "@vueuse/core": "^8.2.6",
     "axios": "^0.26.1",
+    "d3": "^7.8.2",
     "dayjs": "^1.11.1",
     "driver.js": "^0.9.8",
     "live2d-widget": "^3.1.4",
@@ -61,6 +63,7 @@
     "prettier": "^2.6.2",
     "sass": "^1.50.1",
     "standard-version": "^9.3.2",
+    "svg-parser": "^2.0.4",
     "ts-jest": "^27.1.4",
     "typescript": "^4.5.4",
     "unbuild": "^0.7.4",
@@ -75,6 +78,7 @@
     "vite-plugin-pages": "^0.23.0",
     "vite-plugin-restart": "^0.1.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vue-tsc": "^0.29.8"
+    "vue-tsc": "^0.29.8",
+    "xmlreader": "^0.2.3"
   }
 }

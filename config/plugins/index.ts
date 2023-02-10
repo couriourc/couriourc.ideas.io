@@ -9,6 +9,7 @@ import { ConfigMockPlugin } from './mock'
 import { AutoImportDeps } from './autoImport'
 import { configUnocss } from './unocss'
 import { ConfigPagesPlugin } from './pages-gengerator'
+import { svg2d3 } from './vite-svg2d3'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export function createVitePlugins() {
@@ -26,7 +27,8 @@ export function createVitePlugins() {
     VueSetupExtend(),
     PkgConfig(),
     OptimizationPersist(),
-    vueJsx() //tsx 支持
+    vueJsx(), //tsx 支持
+    svg2d3()
   ]
 
   // vite-plugin-mock
