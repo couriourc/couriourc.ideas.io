@@ -201,22 +201,22 @@
       </span>
     </div>
     <div text-white text-left w="70%" m-auto drop-shadow>
-      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3 >
+      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3>
         <p>1.什么是树状数组？</p>
         顾名思义，就是用数组来模拟树形结构呗。那么衍生出一个问题，为什么不直接建树？答案是没必要，因为树状数组能处理的问题就没必要建树。和Trie树的构造方式有类似之处。
       </div>
 
-      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3 >
+      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3>
         <p>2.树状数组可以解决什么问题 ?</p>
         可以解决大部分基于区间上的更新以及求和问题。
       </div>
 
-      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3 >
+      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3>
         <p>3.树状数组和线段树的区别在哪里 ?</p>
         树状数组可以解决的问题都可以用线段树解决，这两者的区别在哪里呢？树状数组的系数要少很多，就比如字符串模拟大数可以解决大数问题，也可以解决1+1的问题，但没人会在1+1的问题上用大数模拟。
       </div>
 
-      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3 >
+      <div hover="bg-white shadow-lg text-black rounded-lg" cursor="pointer" duration-400 p-3>
         <p>4.树状数组的优点和缺点 ?</p>
 
         修改和查询的复杂度都是O(logN)，而且相比线段树系数要少很多，比传统数组要快，而且容易写。

@@ -25,33 +25,30 @@
   )
 </script>
 <template>
-  <header class="header flex justify-between px-1 py-2 text-light-50">
-    <span class="active:text-blue-500 rounded-lg py-1 px-1 cursor-pointer select-none" v-waves>
+  <header class="header flex justify-end px-40px gap-5 py-2 drop-shadow" bg-white>
+    <span class="active:text-blue-500 rounded-lg cursor-pointer select-none" text-lg v-waves>
       <a
         class="decoration-none"
         href="https://github.com/couriourc/50-Project-in-Vue3"
         underline="none"
-        text-white
+        text-black-100
         hover="text-blue-700"
       >
         couriourc
         <i class="fa fa-github" aria-hidden="true"></i>
       </a>
     </span>
-    <span class="active:text-blue-500 rounded-lg py-1 px-1 cursor-pointer select-none" v-waves>
-      Go!</span
-    >
   </header>
-
   <main
     class="logo-panel scroller w-90% h-40vh bg-#eeeeeee block font-serif max-h-40vh overflow-y-scroll"
     m="x-auto"
     shadow-light-500
     rounded-md
+    my-10
   >
     <ul class="flex flex-wrap px-2">
       <li
-        class="nav-item m-1 text-dark-50 inline-block text-center text hover:bg-blue-100 shadow-lg hover:animate-tada wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
+        class="nav-item m-1 text-dark-50 inline-block text-center text hover:bg-blue-100 shadow-lg wrap-content p-2 overflow-hidden rounded-lg cursor-pointer duration-700 select-none"
         v-for="nav in navList"
         :key="nav.title"
         :title="nav.title"
@@ -64,8 +61,7 @@
   </main>
   <div class="w-full flex justify-center mt-20">
     <button
-      class="w-40px h-40px p-2 rounded-full outline-transparent shadow-red-50 text-center border-none text-dark-50 transition-all duration-500"
-      hover="text-white-500 shadow-lg bg-green-300 animate-bounce"
+      class="w-40px h-40px p-2 rounded-full outline-transparent shadow-red-50 text-center border-none text-dark-50 transition-all duration-500 cursor-pointer"
       @click="$router.push('/tutorial')"
       v-waves
     >
@@ -75,7 +71,7 @@
   <footer
     class="footer text-center px-1 py-2 text-light-50 fixed bottom-0 left-50% -translate-x-50% font-thin font-19px scale-50"
   >
-    <p cursor="pointer">@Copyright Couriourc anytime do</p>
+    <p cursor="pointer" text-lg>@Copyright Couriourc anytime do</p>
   </footer>
 </template>
 <style lang="scss" scoped>
@@ -85,10 +81,7 @@
   }
   .nav-item {
     background: #eeeeee;
-    box-shadow: inset -0.1rem -0.1rem 0.15rem 0.05rem rgb(225 225 225 / 40%),
-      inset 0.1rem 0.1rem 0.15rem 0.05rem rgb(0 0 0 / 40%),
-      -0.1rem -0.1rem 0.15rem 0.05rem rgb(225 225 225 / 40%),
-      0.1rem 0.1rem 0.15rem 0.05rem rgb(0 0 0 / 40%);
+    box-shadow: 1px 1px 3px 1px #b2bec3;
   }
 
   .scroller::-webkit-scrollbar {
