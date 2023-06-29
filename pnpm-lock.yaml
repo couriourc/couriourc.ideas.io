@@ -26,6 +26,9 @@ dependencies:
   live2d-widget:
     specifier: ^3.1.4
     version: 3.1.4
+  mind-elixir:
+    specifier: ^2.0.2
+    version: 2.0.2
   pinia:
     specifier: ^2.0.0-rc.10
     version: 2.0.0-rc.10(typescript@4.6.3)(vue@3.2.33)
@@ -7164,6 +7167,10 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
     dev: true
+
+  /mind-elixir@2.0.2:
+    resolution: {integrity: sha512-/iIeX4CpOAro4UGvEhh6qzdAV7lZZ5DItLwzJYjBStQZ7dSOKH3ZmxkIPQlQlbjTSCiOWt6QBOdyWFINosjgiA==}
+    dev: false
 
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
