@@ -1,5 +1,5 @@
 <route>
-  { meta: { title: 'Rotating Array' } }
+{meta: { title: 'Rotating Array'} }
 </route>
 
 <script lang="ts" setup>
@@ -36,7 +36,7 @@
     watch(queue, () => {
       // 当这一批队列没完成的时候，加入下一批等待队列
       // 实现串行调度
-      // 如果有元素,但是没有执行完，那就放入延迟队列
+      // 如果有元素, 但是没有执行完，那就放入延迟队列
 
       for (let i = 0; i < queue.value.length; ++i) {
         // 推迟赋值
@@ -73,7 +73,7 @@
         if (lock) {
           // 如果没有执行完，这一批的信息就暂时放到任务队列
           pending.unshift(newValue)
-          console.log(`当前等待任务还有: ${pending.length} 个`)
+          console.log(` 当前等待任务还有: ${pending.length} 个 `)
           return
         }
         // 并行调度任务
@@ -84,8 +84,10 @@
 
     return proxyQueue
   }
+
   const cur = ref<number | null>(null)
   const queue = useDelayed(cur, 1000)
+
   function rotate() {
     // 得到中心
     let direction: Direction = Direction.Top
@@ -135,7 +137,7 @@
 <template>
   <div flex justify="center" flex-col items-center h-screen>
     <transition-group tag="ul" name="switch" max="10" bg-white p-6 rounded-lg>
-      <input placeholder="请输入矩阵个数" v-model="width" key="input" type="number" />
+      <input placeholder=" 请输入矩阵个数 " v-model="width" key="input" type="number" />
       <li
         v-for="item in arr"
         :key="item"

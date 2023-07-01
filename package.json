@@ -14,12 +14,15 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
     "@types/d3": "^7.4.0",
     "@vueuse/core": "^8.2.6",
     "axios": "^0.26.1",
+    "codemirror": "^6.0.1",
     "d3": "^7.8.2",
     "dayjs": "^1.11.1",
     "driver.js": "^0.9.8",
+    "highlight.js": "^11.8.0",
     "live2d-widget": "^3.1.4",
     "mind-elixir": "^2.0.2",
     "pinia": "^2.0.0-rc.10",
